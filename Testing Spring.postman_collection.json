@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "0a038318-50fb-4150-98f9-dd618e8cc1ad",
+		"name": "Testing Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "101988"
+	},
+	"item": [
+		{
+			"name": "All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product by SKU",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/products/FAL-881952283",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"FAL-881952283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sku\":\"FAL-8406270\",\n    \"name\":\"500 Zapatilla Urbana Mujer\",\n    \"brand\":\"New Balance\",\n    \"size\": \"37\",\n    \"price\": 42990.00,\n    \"principal_image\": \"https://falabella.scene7.com/is/image/Falabella/8406270_1\",\n    \"other_image\": \"https://falabella.scene7.com/is/image/Falabella/8406270_1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product by SKU",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sku\":\"FAL-8406270\",\n    \"name\":\"500 Zapatilla Urbana Mujer\",\n    \"brand\":\"New Balance\",\n    \"size\": \"37\",\n    \"price\": 42990.00,\n    \"principal_image\": \"https://falabella.scene7.com/is/image/Falabella/8406270_1\",\n    \"other_image\": \"https://falabella.scene7.com/is/image/Falabella/8406270_1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
